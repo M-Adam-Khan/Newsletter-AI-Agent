@@ -12,11 +12,9 @@ if __name__ == "__main__":
     print("\n Final Newsletter Output:\n")
     print(newsletter_text)
 
-    # Ensure the folder exists
     output_folder = "Generated Newsletters"
     os.makedirs(output_folder, exist_ok=True)
 
-    # Create the full file path inside the folder
     filename = os.path.join(output_folder, f"{user_topic}_newsletter.docx")
 
     save_newsletter_to_word(newsletter_text, filename=filename)
